@@ -15,7 +15,7 @@
 --------------------------------
 * Variáveis VAR tem escopo de função e global
 * Variáveis LET tem escopo de função, global e de bloco
---------------------------------
+
 * FUJA do escopo GLOBAL!
 --------------------------------
 * HOISTING - jogar para cima
