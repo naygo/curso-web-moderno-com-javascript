@@ -1,8 +1,5 @@
 # Anotações
 
-
-
-<br>---x--- ---x---<br>
 * var
 * let
 * const - utilizar para variavéis que não irão mudar de valor
@@ -18,7 +15,7 @@
 * Variáveis VAR tem escopo de função e global
 * Variáveis LET tem escopo de função, global e de bloco
 
-** FUJA do escopo GLOBAL!
+* FUJA do escopo GLOBAL!
 <br>---x--- ---x---<br>
 HOISTING - jogar para cima
 
