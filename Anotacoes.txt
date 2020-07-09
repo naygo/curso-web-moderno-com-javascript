@@ -1,0 +1,16 @@
+---x--- DENOMINAÇÃO DE VARIAVÉIS ---x---
+var
+let
+const - utilizar para variavéis que não irão mudar de valor
+
+---x--- TIPAGEM FRACA ---x---
+Texto entre aspas simples ('') = texto híbrido, texto em qualquer linguagem
+
+* Uma mesma variavél pode armazenar diversos tipos
+
+---x--- TIPOS EM JAVASCRIPT: NUMBER ---x---
+Number = função
+number = tipo
+
+---x--- JAVASCRIPT ARRAY ---x---
+JSON -  é uma versão textual de um objeto
