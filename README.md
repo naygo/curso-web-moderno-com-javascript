@@ -24,12 +24,7 @@
 * não há motivo para utlizar essa estratégia
 --------------------------------
 * Notação Ponto - acessar membros
-* Teste de branch 
-* Teste de branch 
-* Teste de branch 
-* Teste de branch 
-* Teste de branch 
-
+--------------------------------
 
 
 
