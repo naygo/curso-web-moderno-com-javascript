@@ -1,9 +1,10 @@
 # Anotações
 
+## JavaScript: Fundamentos
 * var
 * let
 * const - utilizar para variavéis que não irão mudar de valor
-<br>---x--- ---x---<br>
+<hr>
 * Texto entre aspas simples ('') = texto híbrido, texto em qualquer linguagem
 * Uma mesma variavél pode armazenar diversos tipos
 <br>---x--- ---x---<br>
