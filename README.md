@@ -165,20 +165,20 @@ console.log('13)', undefined === null) // false
     - F _and_ F = F
     - Basta um ser falso para tudo ser falso.
         - Operador: **&&**
-    <br>
+    <p>&nbsp;</p>
     - V _or_ V = V
     - V _or_ F = V
     - F _or_ F = F
     - Baste um verdadeiro para tudo ser verdadeiro.
         - Operador: **||**
-    <br>
+    <p>&nbsp;</p>
     - V _xor_ V = F
     - V _xor_ F = V
     - F _xor_ V = V
     - F _xor_ F = F
     - Os dois tem de ser diferentes para o resultado ser verdadeiro.
     - Operador: **!=** ou **!!(var1 ^ var2)** _bitwise xor_
-    <br>  
+    <p>&nbsp;</p> 
     - **Negação lógica:**
         - !V = F
         - !F = V
