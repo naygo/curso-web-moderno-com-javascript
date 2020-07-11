@@ -33,7 +33,7 @@
 
 * Notação Ponto - acessar membros
 
-## Operadores
+### Operadores
 
 | Nome | Símbolo |
 | ------ | ----------- |
@@ -46,7 +46,7 @@
 | Ternários | ? |
 
 
-### Atribuição
+#### Atribuição
 ```js
     const a = 7
     let b = 3
@@ -58,7 +58,7 @@
     b %= 2 // b = b % 2
 ```
 
-### Destructuring
+#### Destructuring
 + Novo recurso do ES2015;
 + Ele tira da estrutura alguma coisa;
     - É uma forma de extrair atributos de um objeto
@@ -114,7 +114,7 @@ function rand([ min = 0, max = 100 ]) {
 console.log(rand([ 50, 40 ]))
 ```
 
-### Aritméticos
+#### Aritméticos
 + Operadores binários, ou seja, operam com dois operandos.
 
 ```js
@@ -131,7 +131,7 @@ console.log(-divisao)
 // operador unário, vai converter o valor de divisão para negativo
 ```
 
-### Relacionais
+#### Relacionais
 
 + Resultados sempre serão true ou false.
 
@@ -157,7 +157,7 @@ console.log('12)', undefined == null) // true
 console.log('13)', undefined === null) // false
 ```
 
-### Lógicos
+#### Lógicos
 
 **Tabela verdade:**
 + AND (&&)
@@ -184,7 +184,7 @@ console.log('13)', undefined === null) // false
     - !F = V
         
 
-### Unários
+#### Unários
 
 + Apenas um operando
     - Pós-fixada
@@ -201,7 +201,7 @@ num1++ // pós-fixada
 console.log(++num1 === num2--) // true
 // 1º ++   2º ===  3º --
 ```
-### Ternários
+#### Ternários
 
 + Três operandos, composto por três partes:
     - 1ª: expressão que retorna true ou false
@@ -214,7 +214,7 @@ Exemplo:
 const resultado = nota => nota >= 7 ? 'Aprovado': 'Reprovado'
 ```
 
-## Tratamento de erros
+### Tratamento de erros
 
 + try
 + catch
@@ -234,3 +234,86 @@ try {
     console.log('Executa de qualquer maneira')
 }
 ```
+
+## Estruturas de controle
+
++ Estruturas de condição:
+    - if
+    ```js
+    if(condition) {}
+    ```
+    - if/else
+    ```js
+    if(condition) {
+
+    } else { }
+    ```
+    - if/else if...
+    ```js
+    if(condition) {
+
+    } else if(condition) {
+
+    }
+    ```
+    - switch
+    ```js
+    switch(value) {
+        case 1:
+        case 2:
+            ...
+        break
+    }
+    ```
+
++ Estruturas de repetição:
+    - while 
+    ```js
+    while(condition) {
+        
+    }
+    ```
+    - do/while
+    ```js
+    do {
+        
+    } while(condition)
+    ```
+    - for
+    ```js
+    for(let i = 0; i < cont.length; i++) {
+        
+    }
+    ```
+    - for/in
+    ```js
+    for(let i in variavel) {
+        
+    }
+    ```
+
+### Usando Break/Continue
++ Desvio de fluxo.
++ Funcionam dentro de laços _for_ e _while_.
++ Usar só quando necessário.
+    - break: para o laço mais próximo
+    - continue: pula quando encontrar a condição
+
+Exemplos:
+
+```js
+for(x in nums) {
+    if(x == 5) break
+
+    console.log(`${x} = ${nums[x]}`)
+} // quando o índice for 5, o laço 'for' irá parar
+```
+```js
+for(y in nums) {
+    if(y == 5) continue
+
+    console.log(`${y} = ${nums[y]}`)
+} // índice 5 não será exibido
+```
+
+
