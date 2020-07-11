@@ -159,30 +159,30 @@ console.log('13)', undefined === null) // false
 
 ### Lógicos
 
-+ **Tabela verdade:**
+**Tabela verdade:**
++ AND (&&)
     - V _and_ V = V
     - V _and_ F = F
     - F _and_ F = F
     - Basta um ser falso para tudo ser falso.
-        - Operador: **&&**
-    <p>&nbsp;</p>
+
++ OR (||)
     - V _or_ V = V
     - V _or_ F = V
     - F _or_ F = F
     - Baste um verdadeiro para tudo ser verdadeiro.
-        - Operador: **||**
-    <p>&nbsp;</p>
+       
++ XOR (!= ou !!(var1 ^ var2))
     - V _xor_ V = F
     - V _xor_ F = V
     - F _xor_ V = V
     - F _xor_ F = F
     - Os dois tem de ser diferentes para o resultado ser verdadeiro.
-    - Operador: **!=** ou **!!(var1 ^ var2)** _bitwise xor_
-    <p>&nbsp;</p> 
-    - **Negação lógica:**
-        - !V = F
-        - !F = V
-            - Operador: **!**
+     
++ Negação lógica (!)
+    - !V = F
+    - !F = V
+        
 
 ### Unários
 
