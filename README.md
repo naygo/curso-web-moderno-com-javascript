@@ -48,14 +48,14 @@
 
 #### Atribuição
 ```js
-    const a = 7
-    let b = 3
+const a = 7
+let b = 3
 
-    b += a // b = b + a
-    b -= 4 // b = b - 4
-    b *= 2 // b = b * 2
-    b /= 2 // b = b / 2
-    b %= 2 // b = b % 2
+b += a // b = b + a
+b -= 4 // b = b - 4
+b *= 2 // b = b * 2
+b /= 2 // b = b / 2
+b %= 2 // b = b % 2
 ```
 
 #### Destructuring
@@ -159,7 +159,7 @@ console.log('13)', undefined === null) // false
 
 #### Lógicos
 
-**Tabela verdade:**
+_Tabela verdade:_
 + AND (&&)
     - V _and_ V = V
     - V _and_ F = F
@@ -315,5 +315,201 @@ for(y in nums) {
     console.log(`${y} = ${nums[y]}`)
 } // índice 5 não será exibido
 ```
+
+## JavaScript: Função
+
++ Função JS é First-Class Object (Citizens) || Higher-order function
+    - Função como dado
+
+```js
+// criar de forma literal
+function Fun1() { }
+
+// armazenar em variável
+const Fun2 = function() { }
+
+// armazenar em array
+const Fun3 = [function() { }]
+
+// armazenar em um atributo de um objeto
+const obj = {}
+obj.falar = function() { }
+
+// passar função como parametro
+function run(fun) {
+    fun()
+}
+
+// uma função pode retornar/conter uma função
+function soma() {
+    return function() {
+        
+    }
+}
+```
+
+<kbd>Parâmetros e retornos são opcionais</kbd>
+
++ Uma função pode não ter parâmetros, mas mesmo assim pode receber parâmetros
+    - Use **arguments**. Exemplo:
+    ```js
+    function Soma() {
+        let soma = 0
+        for(i in arguments) {
+            soma += arguments[i]
+        }
+        return soma
+    }
+    console.log(Soma(1, 2, 3))
+    ```
+
+### Parâmetros Padrão
++ Quatro estratégias
+    - ||
+    - var !== undefined ? var : 1 
+    - 1 in arguments ? b : 1
+    - isNaN(c) ? 1 : c
+<br>
+
++ ES2015
+    - Definir já nos parâmetros
+        - function Soma(a = 1, b = 1, c = 1)
+
+### This
+
++ O **this** pode variar.
+    - Acessa alguma coisa do contexto de execução.
+    - Dependendo de como uma função é chamada o _this_ varia.
+    - O _this_ vai ser definido no momento que a função for definida.
+
+#### Bind
+
++  O **bind** amarra determinado objeto para ele ser o dono da execução de um método sempre que for chamado
+```js
+const falarDePessoa = pessoa.falar.bind(pessoa)
+``` 
+
++ Além de usar o bind para driblar o this que varia, é possível atribuir à umma constate o this, assim a constatnte sempre irá apontar para o objeto que deseja. Exemplo:
+```js
+function Pessoa() {
+    const self = this 
+}
+``` 
+
+### Arrow Functions
+
++ É usado uma seta <kbd>=></kbd>, ao invés da palavra <kbd>function</kbd>.
++ São sempre **funções anônimas**.
++ Ajuda em casos em que o _this_ vaira.
+<br>
+
++ A criação de uma **arrow function** consistem em 3 “passos”:
+    - Os parênteses, que é por onde a função recebe os argumentos (assim como na function tradicional);
+    - A “seta” <kbd>=></kbd> - responsável pelo nome “arrow” function;
+    - E as chaves: o bloco de código que representa o corpo da função.
++ Porém ela possui algumas variações. Exemplos:
+
+```js
+dobro = (a) => {
+    return 2 * a 
+}
+// ou com retorno implicito
+dobro = (a) => 2 * a 
+
+ola = () => 'Ola' // função sem parâmetro
+```
+
+### Funções anônimas
+ + Exemplos de funções anônimas:
+    - Variáveis recebendo uma função
+    ```js
+    const variavel = function() { }
+    ```
+    - Enviar funções chamando uma função
+    ```js
+    funcao(a, b, function() { })
+    ```
+    - Funções dentro de um contexto de objeto
+    ```js
+    const variavel = {
+        atributo: function() { }
+    }
+    ```
+    - Funções arrow
+    ```js
+    funcao(a, b, (x, y) => x * y )
+    ```
+
+### Funções Callback
++ Chamar de volta
+    - Uma função é passada, algum evento acontece e a função é chamada de volta para fazer alguma coisa
+    - Uma função que é chamda quando um evento acontecer. Exemplo:
+    ```js
+    const doces = ["Pirulito", "Bala", "Chiclete"]
+
+    function imprimir(nome, indice) {
+        console.log(`${indice + 1}. ${nome}`)
+    }
+
+    doces.forEach(imprimir)
+    ```
+    - Pra cada elemento percorrido no array _(evento)_ a função imprimir é chamada _(callback)_.
+
+### Funções construtoras
++ Usar _'this'_ torna o atributo público.
+ - Outro tipo de declaração _(let, const)_, dentro de funções, torna os atributos privados.
+
+### Declaração de funções
+
++ Function declaration - tradicional
+```js
+function soma(x ,y) {
+    return x + y
+}
+```
++ Function expression
+```js
+const sub = function(x, y) {
+    return x - y
+}
+```
++ Named function expression
+```js
+const mult = function mult(x, y) {
+    return x * y
+}
+```
+
+<kbd> Importante:</kbd> JS carrega todas as funções antes de executar o código, ouseja, colocar funções antes ou depois de serem utilizadas não faz diferença. Porém isso só é possível com funções do tipo _function declaration_.
+
+### Contexto Léxico
++ Contexto onde as coisas foram declaradas dentro da linguagem.
++ Mesmo que chamada longe do local onde foi definida, as funções carregam o contexto onde foram escritas.
+
+    #### Closures
+    - Escopo criado quando uma função é definida.
+        - Esse escopo permite o acesso e manipulação de variáveis externas à função.
+
+### Função Factory
+
++ Função que retorna um objeto.
+    - Um molde para evitar repetições de criação de objetos.
+    - Parecida com classe.
+
+    #### Classe vs Função Factory
+    - Diferença: a função factory tem mais noção do contexto léxico onde ela é criada.
+    - Porque o _this_ na função factory não é necessário.
+
+### IIFE
++ Immediately Invoked Function Expression
+    - Função auto-invocada
+```js
+(function () {
+    
+})()
+```
+### Call & Apply
++ Estudar melhor depois.
+
 
 
