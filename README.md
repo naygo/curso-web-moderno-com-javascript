@@ -315,6 +315,7 @@ for(y in nums) {
     console.log(`${y} = ${nums[y]}`)
 } // índice 5 não será exibido
 ```
+---
 
 ## JavaScript: Função
 
@@ -510,6 +511,89 @@ const mult = function mult(x, y) {
 ```
 ### Call & Apply
 + Estudar melhor depois.
+
+---
+
+## Objeto
+
++ Paradigma orientado à objeto
+    - Mais próximo à realidade
++ Objeto: uma cápsula que agrupa comportamentos e atributos
+```js
+objeto = {
+    valor1,
+    valor2,
+    valor3,
+    processamento() {
+        // ...
+    }
+}
+
+objeto.processamento()
+```
+
++ Princípios importantes
+    - Abstração
+    - Encapsulamento
+    - Herança
+    - Polimorfismo
+
+### [Formas de se criar um objeto](Objeto/criandoObjetos.js)
++ Notação literal
+    - [Melhorias na notação literal de objetos](Objeto/notacaoLiteral.js)
+```js
+const obj1 = {}
+```
++ _Object_ em JS
+```js
+console.log(typeof Object, typeof new Object)
+const obj2 = new Object
+```
++ Funções construtoras
+```js
+function Funcao(a, b, c) {
+    this.a = a
+    this.getSoma = () => {
+        return a + b + c
+    }
+}
+```
++ Função factory
+```js
+function criarForma(nome, lados) {
+    return {
+        nome,
+        lados,
+        getLadosMaisUm() {
+            return lados + 1
+        }
+    }
+}
+```
++ Object.create
+```js
+const a = Object.create(null)
+```
++ Uma função famosa que retorna um objeto
+```js
+const fromJSON = JSON.parse('{"info": "Sou um JSON"}')
+```
+
+Um objeto pode ter outro objeto dentro, um objeto dentro do objeto, funções e etc.
+
+### Getters/Setters
+
++ get = ler variável
++ set = alterar valor de variavéis
+    - Com getters e setters é possível aplicar validações na hora do acesso a variavéis
+    - Garante um maior nível de encapsulamento
+
+```js
+get variavel() { return this._variavel }
+set variavel(variavel) { this._variavel = variavel }
+```
+ 
+> JS não suporta sobrecarga de valores, exceto nos métodos get e set.
 
 
 
