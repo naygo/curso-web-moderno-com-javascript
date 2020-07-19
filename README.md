@@ -642,7 +642,6 @@ Object.defineProperty(objeto, atributo, {
 ```js
 Object.assing(destino, a, b)
 ```
-<<<<<<< HEAD
 
 + Estabelece uma relação de protótipo entre dois objetos
 ```js
@@ -766,88 +765,6 @@ Entender de onde as coisas estão vindo
 
 #### [Require]()
 + Referenciar as pastas e arquivos respeitando letras maiúsculas e minúsculas
-=======
-
-+ Estabelece uma relação de protótipo entre dois objetos
-```js
-Object.setPrototypeOf(objeto1, objeto2)
-// 1º parâmetro = objeto -> 2º parâmetro = protótipo do objeto
-```
-
-### [Herança](Objeto/heranca1.js)
-
-+ Princípio da OO que faz com que seja possível a passagem de atributos e comportamentos
-+ Criar mecanismos para o reuso de código
-    - Objeto tem uma referência para o seu protótipo (forma como JS define herança)
-    - A partir dessa referência pra um prototipo, há uma referência para outro objeto que tem atributos e comportamentos que podem ser acessados pelo objeto filho
-
-#### [Prototype chain](Objeto/heranca2.js)
-+ Procura o atributo na cadeia inteira de protótipos
-    - Quando é feita a procura por um atributo passando em todas as hierarquia (filho, pai, avô) e o atributo não for encontrado, ele é dado como _undefined_.
-```js
-const avo = { attr1: 'A' }
-const pai = { __proto__: avo, attr2: 'B', attr3: '3' }
-const filho = { __proto__: pai, attr3: '3' }
-```
-
-+ **super** referencia um método que está no protótipo
-    - super.metodo()
-
-Duas maneiras para estabeler relação de protótipos:
-```js
-Object.setPrototypeOf(objeto1, objeto2)
-// ou
-const filho = { __proto__: objetoPai }
-```
-
-+ Mais algumas [funções importantes](#objetoFuncoesImportantes):
-    - _**Object.create(prototipo)**_: passa o objeto que deseja ser o protótipo de outro
-    - [_**hasOwnProperty(chave)**_](Objeto/heranca3.js): aquela propriedade pertence ao objeto em questão?
-
-
-> Todos os objetos criados a partir de uma função construtura, a partir do atributo &#95;&#95;proto&#95;&#95; apontam para o mesmo prototype da função.<a id="Objeto/heranca4.js"> Exemplo.</a>
-
-#### [Evitando modificações](Objeto/evitandoModificacoes.js)
-
-+ Object.preventExtensions
-    - não permite a adição de novos atributos
-+ Object.seal
-    - é permitido somente modificar os atributos já existentes
-+ [Object.freeze](Objetos/objetosConstantes.js)
-    - é o resultado de um objeto selado com valores constantes, nada pode ser mudado
-
-+ JSON é gerado de forma muito simples pela maioria das linguagens, por isso é muito usado para comunicação de sistemas.
-    - [JSON vs Objeto](Objeto/jsonVSobjeto.js)
-
-### Classe
-
-+ [Classes](Objeto/classe1.js) são convertidas em funções no JS.
-```js
-class NomeClasse {
-    constructor(attr1, attr2) {
-        this.attr1 = attr1
-        this.attr2 = attr2
-    }
-}
-```
-
-+ [Herança na visão de classe](Objeto/classe2.js).
-    - A herança funciona em cima de _prototype_.
-    - _extends_ para herdar uma clase.
-```js
-class SuperClasse {
-    constructor(attr) {
-        this.attr = attr
-    }
-}
-
-class Classe extends SuperClasse {
-    constructor(attr) {
-        super(attr)
-    }
-}
-```
->>>>>>> 06aaaab756d3de8dfef1bf8c2e2d9db06ffbe866
 
 #### Exports
 + Para exportar um objeto já criado pode-se usar:
