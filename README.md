@@ -738,7 +738,7 @@ Notação literal:
 let array = ['Um', 'Dois', 'Três']
 ```
 
-### [Métodos importantes](/5#Array/arrayMetodos.js/)
+### [Métodos importantes](/5%23Array/arrayMetodos.js/)
 
 | Método | Descrição |
 | ------ | ----------- |
@@ -759,8 +759,8 @@ _Clique no título para ver o arquivo de exemplos._
 ```js
 nomeArray.foreEach()
 ```
-[Exemplos de funções callback como parâmetros em forEach](/5#Array/foreach1.js)
-[Simulando um forEach](/5#Array/foreach2.js)
+[Exemplos de funções callback como parâmetros em forEach](/5%23Array/foreach1.js)
+[Simulando um forEach](/5%23Array/foreach2.js)
 
 
 
