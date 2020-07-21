@@ -723,6 +723,34 @@ class Classe extends SuperClasse {
 }
 ```
 
+
+**tinha pulado a sessao array, voltando pra ela antes de continuar a de node**
+
+## JavaScript: Array 
+
++ É um objeto, só que ao invés de organizar os atributos com chaves, ele organiza a partir de um índice que começa com zero.
+
++ É uma estrutura heterogênea, mas não é bom misturar os tipos de dados
+    - Deve-se trabalhar com dados homogêneos
+
+Notação literal:
+```js
+let array = ['Um', 'Dois', 'Três']
+```
+
+### [Métodos importantes](5#Array/arrayMetodos.js)
+
+| Método | Descrição |
+| ------ | ----------- |
+| pop()   | remove o último elemento do array |
+| push('elemento') | adiciona elemento ao final do array |
+| shift()    | remove o primeiro elemento |
+| unshift('elemento')    | adiciona elemento no ínicio do array |
+| splice(x, y, 'z')    | splice pode adicionar e remover elementos |
+| slice(x, y)    | cria um novo array a partir de indices |
+
+_Clique no título para ver o arquivo de exemplos._
+
 ## Node
 
 + Um runtime que permite rodar JavaScript no back-end (no servidor).
