@@ -738,7 +738,7 @@ Notação literal:
 let array = ['Um', 'Dois', 'Três']
 ```
 
-### [Métodos importantes](5#Array/arrayMetodos.js)
+### [Métodos importantes](/5#Array/arrayMetodos.js/)
 
 | Método | Descrição |
 | ------ | ----------- |
@@ -750,6 +750,19 @@ let array = ['Um', 'Dois', 'Três']
 | slice(x, y)    | cria um novo array a partir de indices |
 
 _Clique no título para ver o arquivo de exemplos._
+
+### Foreach
++ Percorre o array
++ Recebe como parâmetro uma **função callback**
++ A função callback de um _foreach_ recebe três parâmetros: nome, índice e o prórpio array. 
+
+```js
+nomeArray.foreEach()
+```
+[Exemplos de funções callback como parâmetros em forEach](/5#Array/foreach1.js)
+[Simulando um forEach](/5#Array/foreach2.js)
+
+
 
 ## Node
 
