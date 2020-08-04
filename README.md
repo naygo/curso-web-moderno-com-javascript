@@ -18,7 +18,6 @@
 
 ## <a id="fundamentoJS">JavaScript: Fundamentos</a>
 
-> Loren Ipsum
 | Tipo | Descrição |
 | ------ | ----------- |
 | var   | escopo global e de função |
@@ -44,11 +43,11 @@
     - FUJA do escopo GLOBAL!
 
 
-+ HOISTING - jogar para cima
++ HOISTING - 'jogar para cima'
     - a leitura de código normalmente é feita de cima para baixo, em JS isso não acontece 100%
-    - não há motivo para utlizar essa estratégia
+    - todas as funções são lidas antes de tudo
 
-* Notação Ponto - acessar membros
+* Notação Ponto - colocar '.' para acessar membros
 
 ### <a id="fundamentosOperadores">Operadores</a>
 
