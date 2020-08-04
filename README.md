@@ -1,6 +1,6 @@
 # Anotações
 
-#### Sumário
+### Sumário
 <a name="ancora"></a>
 - [JavaScript: Fundamentos](#fundamentosJS)
     - [Operadores](#fundamentosOperadores)
